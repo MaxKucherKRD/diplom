@@ -1,0 +1,13 @@
+@import url(./__paragraphs/customers__paragraphs.css);
+
+.customers {
+    max-width: 85%;
+    margin: auto;
+    padding: 60px 0 ;
+}
+
+@media screen and (max-width:425px) {
+    .customers{
+        padding: 60px 0;
+    }
+}

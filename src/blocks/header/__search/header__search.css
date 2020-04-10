@@ -1,0 +1,15 @@
+.header__search {
+ padding: 80px 0;  
+
+}
+@media screen and (max-width:1024px) {
+    .header__search{
+        padding: 40px 0;        
+    }    
+}
+@media screen and (max-width:425px) {
+    .header__search{
+        padding: 30px 15px;
+             
+    }    
+}

@@ -1,0 +1,26 @@
+.news__button {
+    display: block;
+    margin: auto;
+    width: 280px;
+    height: 60px;
+    background-color: white;
+    border: none;
+    border-radius: 100px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    outline: none;
+    cursor: pointer;
+}
+.news__button:active{
+    opacity: .8;
+}
+@media screen and (max-width:425px) {
+    .news__button{
+        width: 85%;
+        
+    }
+   
+}

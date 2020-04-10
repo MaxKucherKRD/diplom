@@ -1,0 +1,16 @@
+@import url(./__text/numbers__text.css);
+@import url(./__title/numbers__title.css);
+@import url(./__chain/numbers__chain.css);
+
+.numbers {
+    max-width: 85%;
+    margin: auto;
+    padding: 50px 0;
+}
+
+@media screen and (max-width:425px) {
+    .numbers{
+        padding: 0;
+        padding-bottom: 30px;
+    }
+}

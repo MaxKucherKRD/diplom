@@ -1,0 +1,15 @@
+.header__search-field {
+   max-width: 550px;
+   margin: auto;
+   display: flex;
+   margin-top: 60px ;
+   background-color: white;   
+   border-radius: 100px;
+}
+
+@media screen and (max-width : 425px) {
+   .header__search-field {
+      flex-direction: column ;
+      background-color: transparent;  
+   }
+}

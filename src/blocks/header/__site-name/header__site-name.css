@@ -1,0 +1,13 @@
+@import url(./_color/_alter/header__site-name_color_black.css);
+.header__site-name {
+    margin: 0;     
+    font-weight: bold;
+    font-family: Roboto Slab;
+    font-size: 20px;  
+    
+}
+@media screen and (max-width:425px) {
+    .header__site-name{
+        font-size: 14px;
+    }
+}

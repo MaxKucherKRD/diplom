@@ -1,0 +1,15 @@
+.news__text {
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 22px;
+margin: 0;
+margin-top: 15px ;
+display: -webkit-box;
+-webkit-line-clamp: 5;
+-webkit-box-orient: vertical;
+overflow: hidden;
+color: black;
+}
+

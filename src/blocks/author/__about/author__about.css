@@ -1,0 +1,21 @@
+.author__about{
+    padding: 70px;
+    padding-right: 100px;
+}
+
+@media screen and (max-width :1024px)
+{
+    .author__about{
+        padding:0;
+        padding-left: 25px;
+    }
+    
+}
+@media screen and (max-width :425px)
+{
+    .author__about{
+      margin-top: 20px ;
+      padding : 0px;
+    }
+    
+}

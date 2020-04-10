@@ -1,0 +1,17 @@
+@import url(./__container/charts__container.css);
+
+.charts {
+    background: #F5F6F7;  
+    padding: 80px 0;
+    
+}
+@media screen and (max-width:1024px) {
+    .charts{
+        padding: 40px 0;  
+    }
+}
+@media screen and (max-width:425px) {
+    .charts{
+        padding: 20px 0;  
+    }
+}

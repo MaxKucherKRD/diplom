@@ -1,0 +1,12 @@
+.tech__container {
+    max-width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;    
+}
+
+@media screen and (max-width:1024px) {
+    .tech__container {
+        display: block;
+    }
+}

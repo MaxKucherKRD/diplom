@@ -1,0 +1,5 @@
+@import url(./_alter/header__link_active_alter.css);
+.header__link_active {
+    opacity: 1;
+    border-bottom: 3px solid white; 
+}

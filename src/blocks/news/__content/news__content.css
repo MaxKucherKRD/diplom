@@ -1,0 +1,11 @@
+.news__content {
+    padding: 25px 20px;
+    position: relative;
+    padding-bottom: 60px;
+}
+@media screen and (max-width:1024px) {
+    .news__content{
+        padding: 16px 20px;
+        padding-bottom: 50px;
+    }
+}

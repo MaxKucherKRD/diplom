@@ -1,0 +1,10 @@
+@import url(./_bold/numbers__text_bold.css);
+.numbers__text {
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 24px;
+color: #1A1B22;
+margin:0;
+}
