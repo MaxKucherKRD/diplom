@@ -50,8 +50,8 @@ module.exports = {
        }
     ]
   },
-  plugins: [ 
-    new MiniCssExtractPlugin({filename: './styles/index.[contenthash].css'}),
+  plugins: [     
+    new MiniCssExtractPlugin({filename: './index.[contenthash].css'}),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/g,
       cssProcessor: require('cssnano'),
