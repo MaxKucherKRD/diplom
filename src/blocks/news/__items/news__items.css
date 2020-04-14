@@ -10,7 +10,8 @@
 }
 
 @media screen and (max-width:600px) {
-    .news__items{        
+    .news__items{    
+        padding: 30px 0;    
         grid-template-columns: repeat(auto-fill, minmax(0, 100%)); 
     }
 }
