@@ -1,0 +1,9 @@
+.customers__paragraphs {
+    max-width: 65%;
+}
+
+@media screen and (max-width:1024px) {
+    .customers__paragraphs {
+       max-width: 100%;
+    }
+}

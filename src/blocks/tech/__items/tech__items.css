@@ -1,0 +1,18 @@
+.tech__items {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(4,minmax(0,150px)) ;
+    grid-column-gap: 70px;
+    text-align: center;
+}
+@media screen and (max-width:1024px) {
+    .tech__items {
+        margin-top: 35px ;
+        grid-column-gap: 0;
+    }
+}
+@media screen and (max-width:425px) {
+    .tech__items {
+        grid-template-columns: repeat(2,minmax(100px,150px)) ;
+    }
+}   

@@ -1,0 +1,26 @@
+.footer__link {    
+font-family: Source Sans Pro;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 24px;
+color: #1A1B22;
+margin-right: 40px ;
+text-decoration: none;
+}
+
+
+
+@media screen and (max-width:1024px) {
+    .footer__link {
+        margin-right: 15px ;
+    }
+}
+
+@media screen and (max-width:525px) {
+    .footer__link {
+        margin-bottom: 30px ;
+        display: block;
+        
+    }
+}

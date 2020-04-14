@@ -1,0 +1,32 @@
+@import url(./__preloader/news__preloader.css);
+@import url(./__subtitle-loader/news__subtitle-loader.css);
+@import url(./__title-loader/news__title-loader.css);
+@import url(./__not-found-image/news__not-found-image.css);
+@import url(./__head/news__head.css);
+@import url(./__items/news__items.css);
+@import url(./__item/news__item.css);
+@import url(./__img/news__img.css);
+@import url(./__content/news__content.css);
+@import url(./__title/news__title.css);
+@import url(./__text/news__text.css);
+@import url(./__author/news__author.css);
+@import url(./__date/news__date.css);
+@import url(./__button/news__button.css);
+@import url(./__link/news__link.css);
+
+
+.news {
+    padding: 80px 0 ;
+    background-color: #F5F6F7 ;
+}
+
+@media screen and (max-width: 1024px){
+    .news {
+        padding: 40px 0 ;
+    }      
+}
+@media screen and (max-width: 425px){
+    .news {
+        padding: 30px 0 ;
+    }      
+}

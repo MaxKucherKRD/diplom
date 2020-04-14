@@ -1,0 +1,21 @@
+.carousel__cell {
+    background: white;
+    padding: 24px;     
+    width: 25%; 
+    border-radius: 16px;   
+    margin: 0 10px;
+    min-height: 220px ;   
+}
+@media screen and (max-width:1024px) {
+    .carousel__cell {
+        width: 40%;
+    }
+}
+@media screen and (max-width:425px) {
+    .carousel__cell {
+        width: 77%;
+    }
+    .flickity-button {
+        display: none;
+    }
+}

@@ -1,0 +1,16 @@
+@import url(./__head/carousel__head.css);
+@import url(./__avatar/carousel__avatar.css);
+@import url(./__cell/carousel__cell.css);
+@import url(./__container/carousel__container.css);
+@import url(./__date/carousel__date.css);
+@import url(./__text/carousell__text.css);
+@import url(./__user-container/carousel__user-container.css);
+@import url(./__user-info/carousel__user-info.css);
+@import url(./__user-mail/carousel__user-mail.css);
+@import url(./__user-name/carousel__user-name.css);
+@import url(./__button/carousel__button.css);
+
+.carousel {
+    padding: 60px 0;
+    background: #F5F6F7;
+}

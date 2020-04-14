@@ -1,0 +1,9 @@
+.charts__dates {
+      margin-top: 40px;
+      max-width: 10%;      
+}
+@media screen and (max-width:425px) {
+      .charts__dates {
+            margin-top: 20px;
+      }
+}

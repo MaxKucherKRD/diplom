@@ -1,0 +1,32 @@
+
+@import url(./_active/header__link_active.css);
+@import url(./_color/_alter/header__link_color_alter.css);
+
+.header__link {
+    padding: 30px 0 ;
+    display: block;    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;    
+    margin-right: 35px ;      
+    opacity: .5;  
+    cursor: pointer;
+    text-decoration: none;
+    color: white;   
+}
+
+
+.header__link:hover {
+    opacity: 1;
+}
+
+
+
+@media screen and (max-width:425px) {
+    .header__link{
+        font-size: 14px;
+        margin-right: 10px ; 
+        padding: 15px 0 ;
+    }
+}

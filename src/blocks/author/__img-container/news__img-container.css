@@ -1,0 +1,9 @@
+.news__img-container {
+  padding:25px
+   
+}
+@media screen and (max-width :1024px) {
+  .news__img-container {
+    padding: 0;
+  }
+}

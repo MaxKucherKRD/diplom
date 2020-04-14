@@ -1,0 +1,9 @@
+@import url(./__container/tech__container.css);
+@import url(./__img/tech__img.css);
+@import url(./__item/tech__item.css);
+@import url(./__items/tech__items.css);
+@import url(./__text/tech__text.css);
+.tech {
+    padding : 60px 0;
+    background: #F5F6F7;      
+}

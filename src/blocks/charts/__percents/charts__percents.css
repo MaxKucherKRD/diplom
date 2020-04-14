@@ -1,0 +1,15 @@
+@import url(./_bottom/charts__percent_top.css);
+@import url(./_top/charts__percent_bottom.css);
+.charts__percents {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width:100%;  
+ 
+}
+
+@media screen and (max-width:425px){
+    .charts__percents{
+        display: none;
+    }
+}
