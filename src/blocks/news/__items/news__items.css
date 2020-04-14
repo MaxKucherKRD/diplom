@@ -8,13 +8,10 @@
     grid-template-columns: repeat(auto-fill, minmax(0, 32%));
     
 }
-@media screen and (max-width:425px) {
+
+@media screen and (max-width:600px) {
     .news__items{        
         grid-template-columns: repeat(auto-fill, minmax(0, 100%)); 
     }
 }
-@media screen and (max-width:1024px) {
-    .news__items{
-        padding: 30px 0;        
-    }
-}
+
