@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
+
 <head>
-  
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,7 +12,7 @@
   <title>NewsAnalyzer</title>
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
   <link rel="shortcut icon" href="<%=require('./images/fav.svg').default%>" type="image/png">
- 
+
 </head>
 
 <body>
@@ -30,100 +31,37 @@
           Что в мире творится?
         </h1>
         <p class='header__subtitle'>Введите в поиске любую тему и узнайте, насколько популярной она была в носотях за
-          прошедшую неделю.</p>       
-        <form class="header__search-field">
-          <input type="text" class='header__input' required placeholder="Введите тему новости">
-          <input type="submit" class='header__button' value="Найти">
+          прошедшую неделю.</p>
+        <form class="header__search-field" novalidate>
+          <input type="text" class='header__input' name = 'input' required placeholder="Введите тему новости">
+          <input type="submit" class='header__button' value="Найти"  >          
         </form>
-        
-
+        <p  class = 'header__error'>Путой запрос! Введите ключевое слово</p>
       </div>
     </header>
-    <!-- <section class="news">
-      <div class="news__preloader"></div>
-      <p class="news__subtitle-loader">Идет поиск новостей...</p>     // Прелоудер
-    </section> -->
-    <!--   <section class="news">
-      <img src="<%=require('./images/not-found.svg').default%>" alt="Не найдено" class='news__not-found-image'>
-      <h3 class="news__title-loader">Ничего не найдено</h3>
-      <p class="news__subtitle-loader">К сожалению по вашему запросу<br> ничего не найдено.</p> // Ничего не найденно
-    </section> -->
     <section class="news">
-      <div class="news__head">
-        <h3 class="content-title">Результаты поиска</h3>
-        <a href="./analist.html"  class="content-subtitle">Посмотреть аналитику <img src="<%=require('./images/arrow.svg').default%>" alt=""></a>
+      <div class="news__container news__container_hidden">
+        <div class="news__head">
+          <h3 class="content-title">Результаты поиска</h3>
+          <a href="./analist.html" class="content-subtitle">Посмотреть аналитику <img
+              src="<%=require('./images/arrow.svg').default%>" alt=""></a>
+        </div>
+        <div class="news__items">
+        </div>
+        <button class='news__button'>Показать еще</button>
       </div>
-      <div class="news__items">
-        <div class="news__item">
-          <a href="https://lenta.ru/" target="_blank" class='news__link'>
-          <img src="<%=require('./images/flowers.png').default%>" alt="Фото новости" class="news__img">
-          <div class="news__content">
-            <p class="news__date">2 августа, 2019</p>
-            <h4 class="news__title">Национальное достояние – парки</h4>
-            <p class="news__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-              система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-            </p>
-            <p class="news__author">Лента.ру</p>
-          </div>
-          </a>
-        </div>
-        <div class="news__item">
-          <a href="https://lenta.ru/" target="_blank" class='news__link'>
-          <img src="<%=require('./images/flowers.png').default%>" alt="Фото новости" class="news__img">
-          <div class="news__content">
-            <p class="news__date">2 сентябрь, 2012</p>
-            <h4 class="news__title">Национальное достояние – парки</h4>
-            <p class="news__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-              система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-            </p>
-            <p class="news__author">Лента.ру</p>
-          </div>
-          </a>
-        </div>
-        <div class="news__item">
-          <a href="https://lenta.ru/" target="_blank" class='news__link'>
-          <img src="<%=require('./images/flowers.png').default%>" alt="Фото новости" class="news__img">
-          <div class="news__content">
-            <p class="news__date">5 августа, 2011</p>
-            <h4 class="news__title">Национальное достояние – парки</h4>
-            <p class="news__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться
-              система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-            </p>
-            <p class="news__author">Лента.ру</p>
-          </div>
-          </a>
-        </div>
-        <div class="news__item">
-          <a href="https://lenta.ru/" target="_blank" class='news__link'>
-          <img src="<%=require('./images/flowers.png').default%>" alt="Фото новости" class="news__img">
-          <div class="news__content">
-            <p class="news__date">5 августа, 2011</p>
-            <h4 class="news__title">Национальное достояние – парки</h4>
-            <p class="news__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore ullam cumque at. Sint
-              laboriosam totam dolore quidem dolor perspiciatis excepturi quasi consectetur possimus error soluta,
-              consequuntur delectus voluptas, incidunt reiciendis nostrum consequatur, ea rerum cupiditate repudiandae!
-              Vitae excepturi quasi consequatur neque repellendus, repellat illum dolore pariatur, voluptates distinctio
-              nemo nobis!
-            </p>
-            <p class="news__author">Лента.ру</p>
-          </div>
-          </a>
-        </div>
-        <div class="news__item">
-          <a href="https://lenta.ru/" target="_blank" class='news__link'>
-          <img src="<%=require('./images/flowers.png').default%>" alt="Фото новости" class="news__img">
-          <div class="news__content">
-            <p class="news__date">5 августа, 2011</p>
-            <h4 class="news__title">Национальное достояние – парки</h4>
-            <p class="news__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quidem at assumenda ad, saepe enim!
-            </p>
-            <p class="news__author">Лента.ру</p>
-          </div>
-          </a>
-        </div>
-
+      <div class="news__not-found news__not-found_hidden">
+        <img src="<%=require('./images/not-found.svg').default%>" alt="Не найдено" class='news__not-found-image'>
+        <h3 class="news__title-loader">Ничего не найдено</h3>
+        <p class="news__subtitle-loader">К сожалению по вашему запросу<br> ничего не найдено.</p>
       </div>
-      <button class='news__button'>Показать еще</button>
+      <div class="news__load  news__load news__load_hidden  ">
+        <div class="news__preloader"></div>
+        <p class="news__subtitle-loader">Идет поиск новостей...</p>
+      </div>
+      <div class="news__error news__error_hidden ">
+        <h3 class="content-title">Произошла ошибка со стороны сервера<br>Попробуйте позже</h3>
+      </div>
     </section>
     <section class="author">
       <div class="news__img-container">
@@ -131,10 +69,12 @@
       </div>
       <div class="author__about">
         <h3 class="content-title">Об авторе</h3>
-        <p class="content-text"> Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы
-          занимаетесь, какими технологиями разработки владете.</p>
-        <p class="content-text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем
-          можете помочь потенциальным заказчикам.</p>
+        <p class="content-text"> Привет! Меня зовут Максим Кучеренко и я начинающий Frontend-разработчик из города Краснодара ;)</p>
+        <p class="content-text">
+          Я окончил курсы Яндекс.Практикум по направлению 'Frontend', на них были освоины HTML5, CSS3, БЭМ, JavaScript, Webpack.
+          Помимо курсов я окончил колледж по специальности "Техник по инфомрационным системам", и  в данный момент прохожу дистанционно-заочное обучение
+          в ЮФУ на факультете "Информатика и вычслительная техника"
+        </p>
       </div>
     </section>
     <footer class="footer">
@@ -154,4 +94,5 @@
   </div>
 </body>
 <script src="<%=htmlWebpackPlugin.files.chunks.main.entry%>" type="module"></script>
+
 </html>

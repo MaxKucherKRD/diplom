@@ -17,6 +17,9 @@
 .news__button:active{
     opacity: .8;
 }
+.news__button_hidden {
+    display: none;
+}
 @media screen and (max-width:425px) {
     .news__button{
         width: 85%;

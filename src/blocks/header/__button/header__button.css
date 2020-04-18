@@ -11,6 +11,9 @@
  cursor: pointer;
  outline: none;
 }
+.header__button_inactive{    
+    text-decoration: line-through;
+}
 .header__button:hover {
     background: #347EFF;
 }

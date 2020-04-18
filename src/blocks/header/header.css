@@ -10,6 +10,7 @@
 @import url(./__search-field/header__search-field.css);
 @import url(./__line/header__line.css);
 @import url(./_bg/_alter/header_bg_alter.css);
+@import url(./__error/header__error.css);
 
 
 .header {
