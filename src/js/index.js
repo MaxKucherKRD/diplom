@@ -1,4 +1,5 @@
 import '../pages/index.css';
+import '../images/no.jpg';
 import NewsApi from './modules/NewsApi.js';
 import NewsCard from './components/NewsCard.js';
 import NewsCardList from './components/NewsCardList.js';

@@ -4,12 +4,12 @@ export default class NewsApi {
         this.todayDate= todayDate;
         this.weekAgoDate= weekAgoDate;         
 
-        this.url =  'http://newsapi.org/v2/everything?'+
+        this.url =  'https://newsapi.org/v2/everything?'+
                     `q=${this.querry}&` +
                     `from=${this.weekAgoDate}&` +
                     `to=${this.todayDate}&` +       
                     'sortBy=popularity&' +
-                    'pageSize=100&' +
+                    'pageSize=99&' +
                     `apiKey=d77d576b2bdc4d2eaa1e47eadc9b9428`;     
        
         

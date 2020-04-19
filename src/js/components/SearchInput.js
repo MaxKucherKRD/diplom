@@ -1,8 +1,7 @@
 
 export default class SearchInput {
     constructor(NewsCardList){
-        this.NewsCardList = NewsCardList
-        console.log(NewsCardList);
+        this.NewsCardList = NewsCardList        
         this.form = document.querySelector('.header__search-field');
         this.elementContainer = document.querySelector('.news__items');
         this.formInput = document.querySelector('.header__input');
@@ -19,10 +18,7 @@ export default class SearchInput {
         event.preventDefault() 
        if (this.validate()){
         this.NewsCardList.addCard(this.form.input.value);
-       }  
-       
-        
-        
+       } 
      
     }
     validate(){

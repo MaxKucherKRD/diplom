@@ -4,23 +4,26 @@ export default class NewsCard {
         this.cardElement = this.createCard(link, imageLink, date, title, description, author);
 
     }
-
-    createCard(link, imageLink, date, title, description, author) {
-        
-        const transDate = this.transformDate(date);
+  /*   Woman worried for sister at Avocado Post */ 
+    createCard(link, imageLink, date, title, description, author) {      
+        const transDate = this.transformDate(date);     
+        const clearDesciption = description === null ? '' :description.replace(/<.*?>/g, "");// Некоторые новости приходят, в тегах или null, чистим их.    
         const NewsMarkup =
             `
      <a href="${link}" target="_blank" class='news__link'>
-     <img src="${imageLink}" alt="Фото новости" class="news__img">
+     <img src="${imageLink}" alt="Фото новости" onerror = "this.src = './images/no.jpg'" class="news__img"> 
      <div class="news__content">
        <p class="news__date">${transDate}</p>
        <h4 class="news__title">${title}</h4>
-       <p class="news__text">${description}</p>
+       <p class="news__text">${clearDesciption}</p>
        <p class="news__author"> ${author} </p>
-     `
+     </div>
+     </a>   
+     `       
         this.card = document.createElement('div')
         this.card.classList.add('news__item');
-        this.card.innerHTML = NewsMarkup;        
+        this.card.innerHTML = NewsMarkup;     
+        
         return this.card;
     }
     transformDate(date) {
@@ -45,5 +48,5 @@ export default class NewsCard {
         let year = date.match(/\d\d\d\d/g)     
             const transDate = `${day} ${mounth}, ${year}`           
       return    transDate
-    }
+    } 
 }

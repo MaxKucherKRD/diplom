@@ -11,9 +11,12 @@ export default class NewsCardList {
         this.buttonMore.addEventListener('click', ()=>{this.showMore()});
     }
 
-    addCard(querry) {     
+    addCard(querry) {  
         const Api = this.NewsApi(querry)
         this.renderNews(1);
+        localStorage.clear();
+        localStorage.setItem('querry',querry) 
+        this.elementContainer.innerHTML = '';
         Api.getNews()
             .then(data => {
                 console.log(data);
@@ -22,12 +25,11 @@ export default class NewsCardList {
                 }
                 if (data.totalResults < 3) {
                     this.buttonMore.classList.add('news__button_hidden');
-                }
-                localStorage.clear();
+                }               
                 data.articles.forEach((item, index) => {
                     localStorage.setItem(index, item.publishedAt);
                     const newCard = this.createCard(item.url, item.urlToImage, item.publishedAt, item.title, item.description, item.source.name);
-                    const {cardElement} = newCard;
+                    const {cardElement} = newCard;                              
                     if (index > 2) {
                         cardElement.classList.add('news__item_hidden')
                     } // Рендерим только первые 3, остальные скрываем
@@ -37,8 +39,7 @@ export default class NewsCardList {
             .then(() => {
                 this.renderNews(2);
             })
-            .catch((status) => {
-                console.log(status);
+            .catch((status) => {               
                 this.renderNews(status);
             })
     }
@@ -70,20 +71,19 @@ export default class NewsCardList {
                 break;
         }
     }
-    showMore() {     
+    showMore() {  
        
            
-        const items = document.getElementsByClassName('news__item_hidden')
+        this.items = document.getElementsByClassName('news__item_hidden')
       
         for (let i = 0; i < 3; i++) {  // Достаем 3 элемента
            try {    // Если оставшихся элементов осталось меньше 3, пользователь не увидет ошибку.
-            items[0].classList.remove('news__item_hidden') 
-            console.log(items);
+            this.items[0].classList.remove('news__item_hidden')            
            }
            catch {               
            }
         }
-        if (items.length === 0) {
+        if (this.items.length === 0) { // скрываем кнопку, если нет скрытых карточек.
             this.buttonMore.classList.add('news__button_hidden') 
         }
     }
