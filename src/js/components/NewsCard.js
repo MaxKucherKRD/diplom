@@ -4,9 +4,9 @@ export default class NewsCard {
         this.cardElement = this.createCard(link, imageLink, date, title, description, author);
 
     }
-  /*   Woman worried for sister at Avocado Post */ 
+
     createCard(link, imageLink, date, title, description, author) {      
-        const transDate = this.transformDate(date);     
+        const transDate = this._transformDate(date);     
         const clearDesciption = description === null ? '' :description.replace(/<.*?>/g, "");// Некоторые новости приходят, в тегах или null, чистим их.    
         const NewsMarkup =
             `
@@ -26,7 +26,7 @@ export default class NewsCard {
         
         return this.card;
     }
-    transformDate(date) {
+    _transformDate(date) {
         let day = date.match(/\d\dT/g)
         day = parseInt(day[0]);
         let mounth = date.match(/-\d\d\-/g);

@@ -11,25 +11,28 @@ export default class NewsCardList {
         this.buttonMore.addEventListener('click', ()=>{this.showMore()});
     }
 
-    addCard(querry) {  
+    addCard(querry) {         
         const Api = this.NewsApi(querry)
-        this.renderNews(1);
+        this._renderNews(1);
         localStorage.clear();
         localStorage.setItem('querry',querry) 
         this.elementContainer.innerHTML = '';
         Api.getNews()
             .then(data => {
-                console.log(data);
+                localStorage.setItem('querryResult',JSON.stringify(data))
+                console.log(localStorage);
                 if (data.totalResults === 0) {
                     return Promise.reject(3)
                 }
                 if (data.totalResults < 3) {
                     this.buttonMore.classList.add('news__button_hidden');
-                }               
-                data.articles.forEach((item, index) => {
-                    localStorage.setItem(index, item.publishedAt);
+                }                           
+                data.articles.forEach((item, index) => {   
+                    debugger;                
                     const newCard = this.createCard(item.url, item.urlToImage, item.publishedAt, item.title, item.description, item.source.name);
-                    const {cardElement} = newCard;                              
+                    const {cardElement} = newCard;  
+                    console.log(cardElement);
+                    console.log(newCard);                       
                     if (index > 2) {
                         cardElement.classList.add('news__item_hidden')
                     } // Рендерим только первые 3, остальные скрываем
@@ -37,13 +40,13 @@ export default class NewsCardList {
                 })
             })
             .then(() => {
-                this.renderNews(2);
+                this._renderNews(2);
             })
             .catch((status) => {               
-                this.renderNews(status);
+                this._renderNews(status);
             })
     }
-    renderNews(status) {
+    _renderNews(status) {
         switch (status) {
             case 1: // кейс 1 идет загрузка
                 this.elementPreloader.classList.remove('news__load_hidden')

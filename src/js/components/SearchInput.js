@@ -11,17 +11,17 @@ export default class SearchInput {
             this.getKeyWord(event);
         });
         this.form.addEventListener('input', () => {
-            this.validate();
+            this._validate();
         } )
     }
     getKeyWord(event){       
         event.preventDefault() 
-       if (this.validate()){
-        this.NewsCardList.addCard(this.form.input.value);
+       if (this._validate()){         
+        this.NewsCardList.addCard(this.form.input.value.replace(/<.*?>/g, "")); // replace - Защита от XSS
        } 
      
     }
-    validate(){
+    _validate(){
         if (this.form.checkValidity()){
             this.formError.style.opacity = '0'
             this.formButton.removeAttribute('disabled');
