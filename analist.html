@@ -9,7 +9,7 @@
     content="Введите в поиске любую тему и узнайте, насколько популярной она была в носотях за прошедшую неделю.">
   <meta name="author" content="Maxim Kucherenko">
   <title>NewsAnalyzer</title>
-  <link rel="stylesheet" href="./index.423b9f60ea0277894b03.css">
+  <link rel="stylesheet" href="./index.03fcc244646c41c12b2c.css">
   <link rel="shortcut icon" href="./images/fav.svg" type="image/png">
 
 </head>
@@ -29,27 +29,27 @@
     <section class="numbers">
       <p class="numbers__chain">Главная <span class="numbers__chain_active">/ Аналитика</span> </p>
       <h3 class="numbers__title">Вы спросили: «Путешествия»</h3>
-      <p class="numbers__text">Новостей за неделю: <span class="numbers__text_bold">34 324</span> </p>
-      <p class="numbers__text">Упоминаний в загаловках: <span class="numbers__text_bold"> 235</span></p>
+      <p class="numbers__text">Новостей за неделю: <span id = 'NewsForWeek' class="numbers__text_bold">34 324</span> </p>
+      <p class="numbers__text">Упоминаний в загаловках: <span id = 'MatchTitle' class="numbers__text_bold"> 235</span></p>
     </section>
     <section class="charts">
       <div class="charts__container">
         <h3 class="content-title">Аналитика по дням</h3>
         <div class="charts__chart">
           <div class="charts__head">
-            <p class="charts__discription">Дата<br> (август)</p>
+            <p class="charts__discription">Дата</p>
             <p class="charts__discription">Кол-во упоминаний</p>
           </div>
           <hr class='charts__line'>
           <div class="charts__stats">
-            <div class="charts__dates">
-              <p class="charts__date">19,пн</p>
-              <p class="charts__date">20,вт</p>
-              <p class="charts__date">21,ср</p>
-              <p class="charts__date">22,чт</p>
-              <p class="charts__date">23,пт</p>
-              <p class="charts__date">24,сб</p>
-              <p class="charts__date">25,вс</p>
+            <div class="charts__dates" >
+              <p class="charts__date" data-day = '0'></p>
+              <p class="charts__date" data-day = '1'></p>
+              <p class="charts__date" data-day = '2'></p>
+              <p class="charts__date" data-day = '3'></p>
+              <p class="charts__date" data-day = '4'></p>
+              <p class="charts__date" data-day = '5'></p>
+              <p class="charts__date" data-day = '6'></p>
             </div>
             <div class="charts__counts">
               <div class="charts__percents charts__percent_top ">
@@ -58,13 +58,13 @@
                 <p class="charts__percent">50</p>
                 <p class="charts__percent">100</p>
               </div>
-              <p class="charts__count" style='width: 15%;'>15</p> <!-- Размер будет настраиваться с помощью JS -->
-              <p class="charts__count" style='width: 18%;' >18</p>
-              <p class="charts__count" style='width: 15%;'> 15</p>
-              <p class="charts__count" style='width: 39%;'>39</p>
-              <p class="charts__count" style='width: 45%;'>45</p>
-              <p class="charts__count" style='width: 73%;'>73</p>
-              <p class="charts__count" style='width: 34%;'>34</p>
+              <p class="charts__count" data-chart = "0">0</p> <!-- Размер будет настраиваться с помощью JS -->
+              <p class="charts__count" data-chart = "1">0</p>
+              <p class="charts__count" data-chart = "2">0</p>
+              <p class="charts__count" data-chart = "3">0</p>
+              <p class="charts__count" data-chart = "4">0</p>
+              <p class="charts__count" data-chart = "5">0</p>
+              <p class="charts__count" data-chart = "6">0</p>
               <div class="charts__percents charts__percent_bottom ">
                 <p class="charts__percent">0</p>
                 <p class="charts__percent">25</p>
@@ -93,5 +93,5 @@
     </div>    
 </body>
 
-<script src="analist.560d8d84a4447561948b.js" type="module"></script>
+<script src="analist.489fc287bd8a457b6167.js" type="module"></script>
 </html>
