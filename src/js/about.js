@@ -7,9 +7,3 @@ const Flickity = require('flickity');
 const test = new CommitCardList(CommitCard,GitApi,Flickity);
 test.addCard();
 
-/* 
-const carousel = document.querySelector('.carousel__container');
-const flkty = new Flickity( carousel, {
-    wrapAround : true 
-    
-  }); */

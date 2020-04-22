@@ -1,6 +1,12 @@
 export default class NewsCardList {
-    constructor(NewsCard, NewsApi) {
-        this.NewsApi = (querry) =>  new NewsApi( querry, '2020-04-18', '2020-04-16')       
+    constructor(NewsCard, NewsApi,calcTime) {
+        this.calcTime = calcTime;
+        this.today = calcTime(0); // сегодняшняя дата
+        this.calcDay = calcTime(6); // неделя назад 
+        this.NewsApi = (querry) =>  new NewsApi( querry,            
+            `${this.today.getFullYear()}-${this.today.getMonth() + 1}-${this.today.getDate()}`,  // получаем дату в нужном формате ГГГГ-ММ-ДД
+            `${this.calcDay.getFullYear()}-${this.calcDay.getMonth() + 1}-${this.calcDay.getDate()}`
+            )       
         this.createCard = (link, imageLink, date, title, description, author) => new NewsCard(link, imageLink, date, title, description, author)
         this.elementContainer = document.querySelector('.news__items');
         this.elementPreloader = document.querySelector('.news__load');
@@ -20,26 +26,25 @@ export default class NewsCardList {
         Api.getNews()
             .then(data => {
                 localStorage.setItem('querryResult',JSON.stringify(data))
-                console.log(localStorage);
+                console.log(data.totalResults);
+                
                 if (data.totalResults === 0) {
                     return Promise.reject(3)
                 }
-                if (data.totalResults < 3) {
+                if (data.totalResults <= 3) {
                     this.buttonMore.classList.add('news__button_hidden');
                 }                           
                 data.articles.forEach((item, index) => {   
-                    debugger;                
+                                
                     const newCard = this.createCard(item.url, item.urlToImage, item.publishedAt, item.title, item.description, item.source.name);
-                    const {cardElement} = newCard;  
-                    console.log(cardElement);
-                    console.log(newCard);                       
+                    const {cardElement} = newCard;                                          
                     if (index > 2) {
-                        cardElement.classList.add('news__item_hidden')
-                    } // Рендерим только первые 3, остальные скрываем
+                        cardElement.classList.add('news__item_hidden')// Рендерим только первые 3, остальные скрываем
+                    } 
                     this.elementContainer.appendChild(cardElement);
                 })
             })
-            .then(() => {
+            .then(() => {               
                 this._renderNews(2);
             })
             .catch((status) => {               

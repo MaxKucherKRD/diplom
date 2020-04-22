@@ -11,7 +11,7 @@
         width: 40%;
     }
 }
-@media screen and (max-width:425px) {
+@media screen and (max-width:605px) {
     .carousel__cell {
         width: 77%;
     }

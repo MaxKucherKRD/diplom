@@ -7,7 +7,7 @@ export default class GitApi {
         return  fetch(this.request)
         .then(res => {
             if (!res.ok) {                           
-                return  Promise.reject();
+                return  Promise.reject(res.status);
               }
               else {
                return res.json();

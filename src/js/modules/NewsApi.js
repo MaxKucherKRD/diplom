@@ -9,7 +9,7 @@ export default class NewsApi {
                     `from=${this.weekAgoDate}&` +
                     `to=${this.todayDate}&` +       
                     'sortBy=popularity&' +
-                    'pageSize=99&' +
+                    'pageSize=100&' +
                     `apiKey=d77d576b2bdc4d2eaa1e47eadc9b9428`;     
        
         
