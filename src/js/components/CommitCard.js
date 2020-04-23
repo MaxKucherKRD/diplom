@@ -18,7 +18,7 @@ export default class CommitCard {
         `
         this.card = document.createElement('div')
         this.card.classList.add('carousel__cell')
-        this.card.innerHTML = markup;
+        this.card.insertAdjacentHTML('afterbegin', markup);
         
         return this.card;
 

@@ -27,34 +27,34 @@ export default class Statistics {
         this.NewsForWeekElement.textContent = this.querryResult.totalResults;
     }
     _setMatchTitle() {
-        this.arrMatchTitle = this.querryResult.articles.filter((item) => {            
+        this.arrMatchTitle = this.querryResult.articles.filter((item) => {
             return item.title.match(this.regexp);
-        })      
+        })
         this.MatchTitle.textContent = this.arrMatchTitle.length
-        
+
 
     }
     _setCharts() {
         this.result = {}
         this.results = {}
-        this.querryResult.articles.forEach((item) =>{ 
-            let count = 0;  
-            const itemWithoutHour = item.publishedAt.substr(8, 2)           
-            count = item.title.match(this.regexp) === null ?   0 : item.title.match(this.regexp).length  
-            count = item.description.match(this.regexp) === null ? count : count +   item.description.match(this.regexp).length      
-            this.results[itemWithoutHour] = this.results[itemWithoutHour] + count || 1           
-         
-        });    
-   
-        this.keysResult = Object.keys(this.results)        
-        this.keysResult.forEach((item)=>{
-            for (let i = 0 ; i < this.dates.length;i++){
-               if (this.dates[i].textContent.substr(0,2) === item){
-                const dataId = this.dates[i].dataset.day
-                const chartElement = document.querySelector(`.charts__count[data-chart = "${dataId}"]`)
-                chartElement.style.width = `${this.results[item]}%`
-                chartElement.textContent = this.results[item]
-               }
+        this.querryResult.articles.forEach((item) => {
+            let count = 0;
+            const itemWithoutHour = item.publishedAt.substr(8, 2)
+            count = item.title.match(this.regexp) === null ? 0 : item.title.match(this.regexp).length
+            count = item.description.match(this.regexp) === null ? count : count + item.description.match(this.regexp).length
+            this.results[itemWithoutHour] = this.results[itemWithoutHour] + count || 1
+
+        });
+
+        this.keysResult = Object.keys(this.results)
+        this.keysResult.forEach((item) => {
+            for (let i = 0; i < this.dates.length; i++) {
+                if (this.dates[i].textContent.substr(0, 2) === item) {
+                    const dataId = this.dates[i].dataset.day
+                    const chartElement = document.querySelector(`.charts__count[data-chart = "${dataId}"]`)
+                    chartElement.style.width = `${this.results[item]}%`
+                    chartElement.textContent = this.results[item]
+                }
             }
         })
 

@@ -22,7 +22,7 @@ export default class NewsCard {
      `       
         this.card = document.createElement('div')
         this.card.classList.add('news__item');
-        this.card.innerHTML = NewsMarkup;     
+        this.card.insertAdjacentHTML("afterbegin", NewsMarkup);     
         
         return this.card;
     }
