@@ -1,0 +1,19 @@
+.news__container {
+    display: block;
+    padding: 80px 0 ;
+    background-color: #F5F6F7 ;
+}
+.news__container_hidden {
+    display: none;
+}
+
+@media screen and (max-width: 1024px){
+    .news__container {
+        padding: 40px 0 ;
+    }      
+}
+@media screen and (max-width: 425px){
+    .news__container {
+        padding: 30px 0 ;
+    }      
+}

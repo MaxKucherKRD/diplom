@@ -1,0 +1,14 @@
+.header__error {
+    text-align: center;
+    margin: 0;
+    color: red;
+    font-family: roboto;
+    margin-top: 10px;
+    font-size: 18px;
+    opacity: 0;
+}
+@media screen and (max-width:425px) {
+    .header__error{
+        font-size: 14px;
+    }
+}

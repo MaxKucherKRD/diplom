@@ -1,4 +1,16 @@
-.news__img {
+.news__img {     
+    display: block;   
     width: 100%;
-    display: block;
+    height: 220px;
+    object-fit: cover;    
+}
+@media screen and (max-width:1024px) {
+    .news__img{
+        height: 180px;
+    }
+}
+@media screen and (max-width:770px) {
+    .news__img{
+        height: 250px;
+    }
 }

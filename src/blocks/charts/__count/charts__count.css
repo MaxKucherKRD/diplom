@@ -9,15 +9,27 @@
     font-size: 12px;
     line-height: 24px;
     color:white;
-    padding-left: 10px ;
+    padding-left: 4px ;
     box-sizing:border-box;
+    width: 1%;
+    min-width:10px ;
 }
 
 .charts__count:first-of-type {
     margin: 0;
 }
+@media screen and (max-width:1024px) {
+    .charts__count {             
+       min-width:12px;
+       padding-left: 3px;
+    }
+}
 @media screen and (max-width:425px) {
     .charts__count {
+        padding-left: 2px;
        margin-top: 30px;
+       font-size: 8px;
+       min-width:4%;
+      
     }
 }

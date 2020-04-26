@@ -2,4 +2,8 @@
 background-color: white;
 overflow: hidden;
 border-radius: 10px ;
+position: relative;
+}
+.news__item_hidden {
+    display: none;
 }
