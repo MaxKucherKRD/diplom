@@ -1,5 +1,5 @@
 # Новостной агрегатор NewsAnalyzer
-## Версия проекта 0.0.5
+## Версия проекта 1.0.0
 Дипломный проект Яндекс.Практикум по направлению Frontend
 https://maxkucherkrd.github.io/diplom/index.html
 
