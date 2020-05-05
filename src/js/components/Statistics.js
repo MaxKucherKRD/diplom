@@ -27,8 +27,10 @@ export default class Statistics {
         this.NewsForWeekElement.textContent = this.querryResult.totalResults;
     }
     _setMatchTitle() {
-        this.arrMatchTitle = this.querryResult.articles.filter((item) => {
-            return item.title.match(this.regexp);
+        this.arrMatchTitle = this.querryResult.articles.filter((item) => {                   
+            if (item.title !== null){                
+                return item.title.match(this.regexp)
+            };
         })
         this.MatchTitle.textContent = this.arrMatchTitle.length
 
@@ -37,7 +39,8 @@ export default class Statistics {
     _setCharts() {
         
         this.results = {}
-        this.querryResult.articles.forEach((item) => {
+        this.querryResult.articles.forEach((item) => {          
+            if (item.title === null) { return 0}
             let count = 0;
             const itemWithoutHour = item.publishedAt.substr(8, 2)
             count = item.title.match(this.regexp) === null ? 0 : item.title.match(this.regexp).length
