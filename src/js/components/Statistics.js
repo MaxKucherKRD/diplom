@@ -35,7 +35,7 @@ export default class Statistics {
 
     }
     _setCharts() {
-        this.result = {}
+        
         this.results = {}
         this.querryResult.articles.forEach((item) => {
             let count = 0;
@@ -45,11 +45,11 @@ export default class Statistics {
             this.results[itemWithoutHour] = this.results[itemWithoutHour] + count || 1
 
         });
-
+      
         this.keysResult = Object.keys(this.results)
         this.keysResult.forEach((item) => {
-            for (let i = 0; i < this.dates.length; i++) {
-                if (this.dates[i].textContent.substr(0, 2) === item) {
+            for (let i = 0; i < this.dates.length; i++) {               
+                if (parseInt(this.dates[i].textContent.substr(0, 2)) === parseInt(item)) {                   
                     const dataId = this.dates[i].dataset.day
                     const chartElement = document.querySelector(`.charts__count[data-chart = "${dataId}"]`)
                     chartElement.style.width = `${this.results[item]}%`
